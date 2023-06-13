@@ -15,3 +15,4 @@ class FilmeConfig(AppConfig):
         if not usuarios:
             Usuario.objects.create_superuser(username='admin', email=email, password=senha, is_active=True, is_staff=True)
 
+

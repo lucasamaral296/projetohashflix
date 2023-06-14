@@ -95,17 +95,17 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'u7IJn7vUY1TEd6eMo2yr',
         'HOST': 'containers-us-west-8.railway.app',
-        'PORT': '7755',
+        'PORT': '5432',
     }
 }
 
 
-# DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = os.getenv("DATABASE_URL")
 
-# if DATABASE_URL:
-#     DATABASES = {
-#         'defaut': dj_database_url.config(default=DATABASE_URL, conn_max_age=600, )
-#     }
+if DATABASE_URL:
+    DATABASES = {
+        'defaut': dj_database_url.config(default=DATABASE_URL, conn_max_age=600, )
+    }
 
 
 

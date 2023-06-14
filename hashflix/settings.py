@@ -31,7 +31,7 @@ else:
     SECRET_KEY = 'django-insecure-22ugr@o=e9!p!$wh+qxm&z+bp6a2s9qm$p@=cgu&u9^pacprzi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["projetohashflix-production-e937.up.railway.app", "localhost", "127.0.0.1"]
 
@@ -97,12 +97,12 @@ DATABASES = {
 
 
 
-# DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = os.getenv("DATABASE_URL")
 
-# if DATABASE_URL:
-#     DATABASES = {
-#         'defaut': dj_database_url.config(default=DATABASE_URL, conn_max_age=600, )
-#     }
+if DATABASE_URL:
+    DATABASES = {
+        'defaut': dj_database_url.config(default=DATABASE_URL, conn_max_age=600, )
+    }
 
 
 

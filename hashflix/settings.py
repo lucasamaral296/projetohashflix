@@ -90,14 +90,11 @@ WSGI_APPLICATION = 'hashflix.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'u7IJn7vUY1TEd6eMo2yr',
-        'HOST': 'containers-us-west-8.railway.app',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 DATABASE_URL = os.getenv("DATABASE_URL")

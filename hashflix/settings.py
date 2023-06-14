@@ -66,10 +66,7 @@ ROOT_URLCONF = 'hashflix.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates',
-                 "/home/html/example.com",
-                 "/home/html/default",
-                 ],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,12 +78,6 @@ TEMPLATES = [
                 'filme.novos_context.lista_filmes_em_alta',
             ],
         },
-    },
-    {
-        "BACKEND": "django.template.backends.jinja2.Jinja2",
-        "DIRS": [
-            "/home/html/jinja2",
-        ],
     },
 ]
 

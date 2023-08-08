@@ -26,14 +26,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TOKEN_CSFR = os.getenv('TOKEN_CSFR')
 if TOKEN_CSFR:
     SECRET_KEY = TOKEN_CSFR
-    CRFS_TRUSTED_ORIGINS = ['https://projetohashflix-production-e937.up.railway.app/']
+    CRFS_TRUSTED_ORIGINS = ['https://projetohashflix-production-2dfa.up.railway.app/']
 else:
     SECRET_KEY = 'django-insecure-22ugr@o=e9!p!$wh+qxm&z+bp6a2s9qm$p@=cgu&u9^pacprzi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ["*"]
+=======
+ALLOWED_HOSTS = [
+    "https://projetohashflix-production-2dfa.up.railway.app",
+    "localhost",
+    "127.0.0.1"
+]
+>>>>>>> 1e3dce4f490dff9fc2dd3a3a851074d027bbe4cb
 
 
 # Application definition
@@ -101,7 +109,11 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 
 if DATABASE_URL:
     DATABASES = {
+<<<<<<< HEAD
         'defaut': dj_database_url.config(default=DATABASE_URL, conn_max_age=18000, )
+=======
+        'defaut': dj_database_url.config(default=DATABASE_URL, conn_max_age=600,ssl_require=True )
+>>>>>>> 1e3dce4f490dff9fc2dd3a3a851074d027bbe4cb
     }
 
 
